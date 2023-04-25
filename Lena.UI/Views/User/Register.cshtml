@@ -1,0 +1,12 @@
+﻿@using Lena.Entities.Concrete
+@model User
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+<form method="post" class="form">
+    <input asp-for="UserName" class="form-control" required/>
+    <input type="password" name="password" class="form-control" required/>
+    <button class="btn btn-primary" type="submit">Kaydol</button>
+</form>

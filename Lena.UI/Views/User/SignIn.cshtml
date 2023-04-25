@@ -1,0 +1,14 @@
+﻿@using Lena.Entities.Concrete
+@model User
+@{
+    ViewData["Title"] = "SignIn";
+}
+
+<h1>SignIn</h1>
+<form method="post" class="form">
+    <input name="userName" class="form-control" required/>
+    <input type="password" name="password" class="form-control" required/>
+    <button class="btn btn-primary" type="submit">Giriş yap</button>
+</form>
+
+

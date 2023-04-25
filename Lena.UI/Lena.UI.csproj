@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lena.Business\Lena.Business.csproj" />
+    <ProjectReference Include="..\Lena.Core\Lena.Core.csproj" />
+    <ProjectReference Include="..\Lena.DataAccess\Lena.DataAccess.csproj" />
+    <ProjectReference Include="..\Lena.Entities\Lena.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
