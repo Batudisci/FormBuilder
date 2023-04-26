@@ -17,6 +17,10 @@ namespace Lena.UI.Controllers
 
         public IActionResult SignIn()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/forms");
+            }
             return View();
         }
         [HttpPost]
@@ -32,6 +36,10 @@ namespace Lena.UI.Controllers
 
         public IActionResult Register()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/forms");
+            }
             return View();
         }
 

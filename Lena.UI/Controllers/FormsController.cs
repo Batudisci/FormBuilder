@@ -4,20 +4,20 @@ using System.Diagnostics;
 
 namespace Lena.UI.Controllers
 {
-    public class HomeController : Controller
+    public class FormsController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<FormsController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public FormsController(ILogger<FormsController> logger)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            if (User.Identity.IsAuthenticated)
+            if (!User.Identity.IsAuthenticated)
             {
-                return Redirect("/forms");
+                return Redirect("/");
             }
             return View();
         }
