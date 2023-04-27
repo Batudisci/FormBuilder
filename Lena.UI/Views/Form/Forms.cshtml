@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Forms";
+}
+<div ng-app="form">
+    <div ng-controller="formController as form">
+        <h1>{{form.data.name}}</h1>
+        <p>
+            {{form.data.description}}
+        </p>
+        <form>
+            <div class="row"  ng-repeat="field in form.data.formFields">
+                <label class="col">{{field.name}}</label>
+                <input class="col" placeholder="{{field.description}}" type="{{field.dataType=='STRING'?'text':'number'}}" ng-required="{{field.required}}"/>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Form</button>
+        </form>
+    </div>
+</div>
+<script src="~/js/form.js" defer></script>

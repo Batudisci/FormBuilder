@@ -1,0 +1,13 @@
+﻿.form-card {
+    display: inline-block;
+}
+
+#form-cards {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+#create-form-button {
+    margin-bottom: 10px;
+}

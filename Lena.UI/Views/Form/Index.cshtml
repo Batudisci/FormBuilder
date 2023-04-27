@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Forms";
+}
+<div ng-app="forms">
+    <div ng-controller="formsController as formList">
+        <div class="d-flex justify-content-around mb-4">
+            <button class="btn btn-primary" asp-route-id="form.id" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" ng-click="formList.cleanNewForm()">Create Form</button>
+            <input placeholder="search" ng-model="formList.search" ng-change="formList.filter()"/>
+        </div>
+        <div id="form-cards">
+            <div class="card form-card" style="width: 18rem;" ng-repeat="form in formList.dataShow track by form.id">
+                <div class="card-body">
+                    <h5 class="card-title">{{form.name}}</h5>
+                    <p class="card-text">{{form.description}}</p>
+                    <a href="Form/Forms/{{form.id}}" class="btn btn-primary">Show Form</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Create New Form</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" ng-submit="formList.addField()">
+                            <label>Field Name</label> <input ng-model="formList.newName" class="form-control" placeholder="name" required/>
+                            <label>Field Description</label> <input ng-model="formList.newDescription" class="form-control" placeholder="description"/>
+                            <label>Field Required</label> <input ng-model="formList.newRequired" type="checkbox"/>
+                            <select ng-model="formList.newType" class="form-control" required>
+                                <option value="STRING">
+                                    String
+                                </option>
+                                <option value="INTEGER">
+                                    Integer
+                                </option>
+                            </select>
+                            <button class="btn btn-primary" type="submit">Create Field</button>
+                        </form>
+                        <hr/>
+                        <div class="row" ng-repeat="field in formList.newForm.formFields">
+                            <label class="col">{{field.name}}</label>
+                            <input class="col" placeholder="{{field.description}}" type="{{field.dataType=='STRING'?'text':'number'}}"/>
+                        </div>
+                        <hr/>
+                        <form ng-submit="formList.saveForm()">
+                            <label>Form Name</label> <input ng-model="formList.newFormName" class="form-control" placeholder="name" required/>
+                            <label>Form Description</label> <input ng-model="formList.newFormDescription" class="form-control" placeholder="description"/>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+</div>
+
+<link href="~/css/forms.css" rel="stylesheet" />
+<script src="~/js/forms.js" defer></script>

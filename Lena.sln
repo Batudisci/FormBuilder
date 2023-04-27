@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lena.Entities", "Lena.Entities\Lena.Entities.csproj", "{C9903FB9-023D-417B-8D2E-B2A132BF8C60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lena.Entities", "Lena.Entities\Lena.Entities.csproj", "{C9903FB9-023D-417B-8D2E-B2A132BF8C60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lena.DataAccess", "Lena.DataAccess\Lena.DataAccess.csproj", "{B3E2E24B-55FD-4C05-B8B7-ECF325A9E502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lena.DataAccess", "Lena.DataAccess\Lena.DataAccess.csproj", "{B3E2E24B-55FD-4C05-B8B7-ECF325A9E502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lena.Core", "Lena.Core\Lena.Core.csproj", "{CEE9F56A-1D38-41F2-86ED-54786E3D565E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lena.Core", "Lena.Core\Lena.Core.csproj", "{CEE9F56A-1D38-41F2-86ED-54786E3D565E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lena.Business", "Lena.Business\Lena.Business.csproj", "{0342448E-2823-4502-89C2-3B462B5800D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lena.Business", "Lena.Business\Lena.Business.csproj", "{0342448E-2823-4502-89C2-3B462B5800D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lena.UI", "Lena.UI\Lena.UI.csproj", "{E6AC2BC4-2D6A-4221-9BD2-174BA9F01C35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lena.UI", "Lena.UI\Lena.UI.csproj", "{E6AC2BC4-2D6A-4221-9BD2-174BA9F01C35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lena.API", "Lena.API\Lena.API.csproj", "{AF2DF1BB-B3A3-4FDD-8929-39CBD95A0FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E6AC2BC4-2D6A-4221-9BD2-174BA9F01C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6AC2BC4-2D6A-4221-9BD2-174BA9F01C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6AC2BC4-2D6A-4221-9BD2-174BA9F01C35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF2DF1BB-B3A3-4FDD-8929-39CBD95A0FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2DF1BB-B3A3-4FDD-8929-39CBD95A0FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF2DF1BB-B3A3-4FDD-8929-39CBD95A0FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2DF1BB-B3A3-4FDD-8929-39CBD95A0FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

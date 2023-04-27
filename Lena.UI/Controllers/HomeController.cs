@@ -17,7 +17,7 @@ namespace Lena.UI.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return Redirect("/forms");
+                return Redirect("/form");
             }
             return View();
         }
