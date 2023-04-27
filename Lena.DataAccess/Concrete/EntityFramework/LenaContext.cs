@@ -10,12 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Lena.DataAccess.Concrete.EntityFramework
 {
-    public class LenaContext : IdentityDbContext<User,IdentityRole<int>,int>
+    public class LenaContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=JARVIS;DataBase=LenaDb;Trusted_connection=true;");
+            optionsBuilder.UseSqlServer("server=JARVIS;DataBase=LenaDB;Trusted_connection=true;");
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Form> Forms { get; set; }
+        public DbSet<FormField> FormFields { get; set; }
     }
 }
