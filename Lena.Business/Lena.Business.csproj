@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Lena.DataAccess\Lena.DataAccess.csproj" />
+    <ProjectReference Include="..\Lena.Entities\Lena.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
